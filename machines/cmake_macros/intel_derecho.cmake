@@ -3,6 +3,7 @@ string(APPEND CFLAGS " -qopt-report -march=core-avx2")
 string(APPEND FFLAGS " -qopt-report -march=core-avx2")
 string(APPEND CFLAGS " -I$ENV{NCAR_INC_SUPERLU}")
 string(APPEND LDFLAGS " -L$ENV{NCAR_LDFLAGS_SUPERLU} -lsuperlu")
+string(APPEND CPPDEFS " -DHAS_SUPERLU_SLV ")
 
 if (COMP_NAME STREQUAL gptl)
   string(APPEND CPPDEFS " -DHAVE_SLASHPROC")
